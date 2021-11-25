@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>sajshja</title>
+      <link href="/2021/11/25/sajshja/"/>
+      <url>/2021/11/25/sajshja/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: [Deployment](</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+            <tag> csdj </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>abbbc</title>
+      <link href="/2021/11/24/abbbc/"/>
+      <url>/2021/11/24/abbbc/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>xjksxjxssx</p></blockquote><ul><li><p><strong>12</strong>开创互联网医疗新纪元</p><p>区块链技术支持</p><h3 id="全过程透明监管"><a href="#全过程透明监管" class="headerlink" title="全过程透明监管"></a>全过程透明监管</h3><h2 id="多端联动协作"><a href="#多端联动协作" class="headerlink" title="多端联动协作"></a>多端联动协作</h2><h2 id="中心的–分布的"><a href="#中心的–分布的" class="headerlink" title="中心的–分布的"></a>中心的–分布的</h2><p>人工的–智慧</p><p>[dededw]: </p><p>杂乱的–统一的</p><p>冗余的–快捷的</p><p><strong>13</strong>产品优势：</p><p>·    患者与熟悉的医生在线问诊，信任感强</p><p>·    患者有购药自主权</p><p>·    保障患者个人医疗隐私</p><p>·    解决药店核验处方的难题</p><p>·    与多间药企/药店合作，药物来源多样化、线下取药点多</p><p>·   </p></li></ul><p>“Somewhere, something incredible is waiting to be known”</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 非递归</span><span class="token keyword">public</span> <span class="token class-name">ListNode</span> <span class="token function">reverseList</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment">// 两个个指针</span>    <span class="token class-name">ListNode</span> pre <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>    <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>    <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">ListNode</span> tmp <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> pre<span class="token punctuation">;</span>        pre <span class="token operator">=</span> cur<span class="token punctuation">;</span>        cur <span class="token operator">=</span> tmp<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> pre<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// 递归</span><span class="token keyword">public</span> <span class="token class-name">ListNode</span> <span class="token function">reverseList2</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">return</span> <span class="token function">subReverse</span><span class="token punctuation">(</span>head<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// 递归方法的返回值</span><span class="token comment">// 递归方法的参数</span><span class="token comment">// 递归终止条件</span><span class="token comment">// 递归体</span><span class="token keyword">private</span> <span class="token class-name">ListNode</span> <span class="token function">subReverse</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">,</span> <span class="token class-name">ListNode</span> pre<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">return</span> pre<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token class-name">ListNode</span> res <span class="token operator">=</span> <span class="token function">subReverse</span><span class="token punctuation">(</span>head<span class="token punctuation">.</span>next<span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">;</span>    head<span class="token punctuation">.</span>next <span class="token operator">=</span> pre<span class="token punctuation">;</span>    <span class="token keyword">return</span> res<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>14</strong>竞品分析：</p><p>（1-5评级）</p><table><thead><tr><th></th><th><strong>真实性</strong></th><th><strong>抗抵赖性</strong></th><th><strong>隐私安全</strong></th><th><strong>成本及效率</strong></th></tr></thead><tbody><tr><td><strong>手写处方</strong></td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td><strong>普通电子处方</strong>  （美团医生、丁香医生等平台）</td><td>2</td><td>3</td><td>2</td><td>2</td></tr><tr><td><strong>基于区块链的电子处方</strong>  （阿里巴巴–蚂蚁链）</td><td>5</td><td>5</td><td>3</td><td>3</td></tr><tr><td><strong>基于智能合约的Token化处方</strong>  （链客方）</td><td>5</td><td>5</td><td>5</td><td>5</td></tr></tbody></table><p><strong>15</strong>盈利模式</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/11/06/hello-world/"/>
+      <url>/2021/11/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
