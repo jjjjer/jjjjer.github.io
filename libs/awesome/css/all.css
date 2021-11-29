@@ -3078,9 +3078,6 @@ readers do not read off random characters that represent icons */
 .fa-radiation-alt:before {
   content: "\f7ba"; }
 
-.fa-rainbow:before {
-  content: "\f75b"; }
-
 .fa-random:before {
   content: "\f074"; }
 
