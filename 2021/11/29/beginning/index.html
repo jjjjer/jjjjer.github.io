@@ -205,7 +205,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/20211129152054.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/20211129152054.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -393,7 +393,7 @@
 <p>在经历了诸多困难（主要是克服懒）之后，我终于建立了自己的博客。我为啥要建博客是因为我觉着自己这样才像一个正经（装模做样）的极客，所以也希望这个小站能够成为帮助我记录学习和生活的好朋友</p>
 </blockquote>
 <h2 id="建站时踩过的坑"><a href="#建站时踩过的坑" class="headerlink" title="建站时踩过的坑"></a>建站时踩过的坑</h2><h3 id="Hexo框架"><a href="#Hexo框架" class="headerlink" title="Hexo框架"></a>Hexo框架</h3><p>在选择博客框架的时候毫不犹豫选择了hexo，为啥呢因为我没有耐心去一个个比较：我需要一个博客框架，而hexo正好第一个出现在了我的眼前，这个成熟又稳重的男人虽然我不了解，但是他看起来就很可靠。</p>
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129153402914.png" alt="image-20211129153402914"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129153402914.png" alt="image-20211129153402914"></p>
 <p>不过接触之后我觉得hexo还是比较容易上手的，它有比较完整的文档，并且在网上随便就能搜到有关的一大堆教程以及踩坑记录。所以在各种不知名网友的帮助下，我像装扮QQ空间一样装扮好了我的博客。</p>
 <h4 id="上手"><a href="#上手" class="headerlink" title="上手"></a>上手</h4><p>在准备方面只需要确保电脑上安装了NodeJS，那么就可以直接使用以下命令安装它的依赖包，并且使用它的官网首页<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a> 上列出来的小白教程就能在本地预览它</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g
@@ -403,7 +403,7 @@ hexo init blog
 hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>它的基础页面大概长这个样子</p>
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129154659951.png" alt="image-20211129154659951"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129154659951.png" alt="image-20211129154659951"></p>
 <p>非常地毛胚啊，但是也算是一应俱全，特别是对于我这种预算不高要求甚少的来说也勉强能够凑合</p>
 <p>接下来我们可以打开我们安装的hexo包的文件夹，仔细查看一下我们的毛胚房的构造，好知道从哪儿开工</p>
 <pre class="line-numbers language-none"><code class="language-none">.
@@ -431,16 +431,16 @@ permalink: ':year/:month/:day/:title/'<span aria-hidden="true" class="line-numbe
 
 <p>这个里面呢每个参数的意思都可以在<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">https://hexo.io/zh-cn/docs/configuration</a> 中找到，根据自己的需要设置即可</p>
 <h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p>hexo的themes页面可以找到各种各样的主题，我最后选择的主题是matery，为啥呢因为我之前本来选择了一个别的主题但是隔了一周没有去关心了结果再上手就整不会了，所以重新选择了matery，还因为它有中文文档并且它的排版看起来比较舒服，虽然我觉得原作者的审美不是很行，但是我觉得我能靠我自己的软装修功夫让它变得好看一些（原作者配色be like</p>
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129165136846.png" alt="image-20211129165136846"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129165136846.png" alt="image-20211129165136846"></p>
 <p>好，那么在我们下载完成后该主题后第一步是更改一下我们的主题设置，在hexo的配置文件**_config.yml**中设置主题:</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">theme: hexo-theme-matery-master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>接下来是激烈又繁琐的软装修设计，主要操作的文件有matery主题的配置文件以及matery.css文件，作者十分友好地在配置文件的每个条目都添加了中文注释，同时呢我本人比较喜欢舒服淡雅一点的配色去掉了主页的彩虹蒙版并自己调了色彩，最后的呈现效果本人还是比较满意</p>
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129170904111.png" alt="image-20211129170904111"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129170904111.png" alt="image-20211129170904111"></p>
 <h3 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h3><p>在做好了装修的工作之后，我的博客得有个正经的样子，我得给人家看啊（虽然主要是给自己看，我甚至没有安装评论之类的插件），但是我又不想顶着ip地址+端口这样难看的url给人访问，我还舍不得花钱租域名，所以最后我决定在github上托管我自己的博客，顺便使用github pages部署，省钱，又体面。</p>
 <p>So我注册了一个匿名邮箱，新建了一个github账号，新建了一个仓库，根据前辈们的经验，仓库名应命名为：用户名.github.io，彰显极客范儿。</p>
 <p>接下来我在这里设置了仓库的github pages，域名直接为该仓库名，所以在刚才我们的仓库名命名时就很有讲究，其实github本身就有博客模板，可以在这里choose a theme 设置完成后直接访问域名就能看到默认的github pages页面</p>
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129172035678.png" alt="image-20211129172035678"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129172035678.png" alt="image-20211129172035678"></p>
 <h3 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h3><p>现在房主十分开心，即将把自己的房子挂到互联网上去，但是在hexo官方的部署方法指导下我尝试了多次仍然没有成功，github经常报错，最终被折磨得没脾气的我重新设置了本地git的连接，主要的步骤如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"github用户名"</span>
 <span class="token function">git</span> config --global user.email <span class="token string">"github注册邮箱"</span>
@@ -450,7 +450,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
 <p>执行以下命令查看ssh是否连接成功</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/image-20211129174317203.png" alt="image-20211129174317203"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129174317203.png" alt="image-20211129174317203"></p>
 <p>OK，现在ssh连接成功了，但是我仍然部署失败，在寻求前辈们的帮助下，我在hexo的配置文件中将deploy设置为了</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">deploy:
   type: git
@@ -707,7 +707,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
                 <a href="/2021/12/06/ke-mu-er/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/jjjjer/Figurebed/master/img/DSC06409.jpg" class="responsive-img" alt="科目二">
+                        <img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/DSC06409.jpg" class="responsive-img" alt="科目二">
                         
                         <span class="card-title">科目二</span>
                     </div>
