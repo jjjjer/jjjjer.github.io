@@ -392,7 +392,7 @@
                 <blockquote>
 <p>在经历了诸多困难（主要是克服懒）之后，我终于建立了自己的博客。我为啥要建博客是因为我觉着自己这样才像一个正经（装模做样）的极客，所以也希望这个小站能够成为帮助我记录学习和生活的好朋友</p>
 </blockquote>
-<h2 id="建站时踩过的坑"><a href="#建站时踩过的坑" class="headerlink" title="建站时踩过的坑"></a>建站时踩过的坑</h2><h3 id="Hexo框架"><a href="#Hexo框架" class="headerlink" title="Hexo框架"></a>Hexo框架</h3><p>在选择博客框架的时候毫不犹豫选择了hexo，为啥呢因为我没有耐心去一个个比较：我需要一个博客框架，而hexo正好第一个出现在了我的眼前，这个成熟又稳重的男人虽然我不了解，但是他看起来就很可靠。</p>
+<h2 id="建站时踩过的坑"><a href="#建站时踩过的坑" class="headerlink" title="建站时踩过的坑"></a>建站时踩过的坑</h2><h3 id="Hexo框架"><a href="#Hexo框架" class="headerlink" title="Hexo框架"></a>Hexo框架</h3><p>在选择博客框架的时候毫不犹豫选择了hexo，为啥呢因为我没有耐心去一个个比较：我需要一个博客框架，而hexo正好第一个出现在了我的眼前，这个成熟又稳重的框架虽然我不了解，但是他看起来就很可靠。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master/img/image-20211129153402914.png" alt="image-20211129153402914"></p>
 <p>不过接触之后我觉得hexo还是比较容易上手的，它有比较完整的文档，并且在网上随便就能搜到有关的一大堆教程以及踩坑记录。所以在各种不知名网友的帮助下，我像装扮QQ空间一样装扮好了我的博客。</p>
 <h4 id="上手"><a href="#上手" class="headerlink" title="上手"></a>上手</h4><p>在准备方面只需要确保电脑上安装了NodeJS，那么就可以直接使用以下命令安装它的依赖包，并且使用它的官网首页<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a> 上列出来的小白教程就能在本地预览它</p>
@@ -415,10 +415,10 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 |   └── _posts
 └── themes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>简单来说，**_config.yml** 这个文件是最重要的，相当于一份装修合同，里面拟好了这个房子是谁的、这个窝起的啥名儿、装修是啥风格等等</p>
+<p>简单来说，**config.yml ** 这个文件是最重要的，相当于一份装修合同，里面拟好了这个房子是谁的、这个窝起的啥名儿、装修是啥风格等等</p>
 <p>package.json我们不关心就是一些依赖设置，<strong>scaffolds</strong>里面放置的是写文章时候的模板，新建页面的模板，以及文章草稿的模板，模板这个东西显然是为了以后偷懒用的。<strong>source</strong>里面放置的就是我们写的文章或者草稿啦。</p>
 <p>themes是个好东西，用来存放你下载的主题，也就是各种装修风格</p>
-<p>所以接下来首先我打开的是hexo的**_config.yml**文件，设置一些房子的基本信息</p>
+<p>所以接下来首先我打开的是hexo的<strong>config.yml</strong>文件，设置一些房子的基本信息</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">title: JeBlog
 subtitle: Begin again
 description: ''
@@ -459,7 +459,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
 <p>这样，我们最终使用hexo g &amp;&amp; hexo d 命令，终于将我的博客push到了github仓库里，虽然没明白是为什么，但是之前的那种仓库索引方式似乎一直无法连接，github的使用实在是有些繁琐</p>
 <p>但是，当我特别开心地在地址栏里输入我的域名的时候仍然显示的是之前生成的默认页面，最后查看了一下是分支的问题，我push的代码和pages的设置不是同一分支，修改了一下就可以啦</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总而言之，在漫长的装修过程中我的房子终于完工啦，虽然它看起来很简陋，不过每次完成一个项目之后我都会反复去点击这里的每个button，查看各种细枝末节的角落，我觉得它已经足够好。</p>
-<p>在这个过程中还学习了不少markdown语法以及设置了typora图床，我很喜欢这种书写方式，它非常简洁并且高效。我的一个重要朋友之前总嫌弃我写的文档太差，前言不搭后语，语重心长地告诫我：可别瞧不起写文档，谁会去了解一个没有文档的项目啊。所以以后要多多产出，学习，记录！</p>
+<p>在这个过程中还学习了不少markdown语法以及设置了typora图床，我很喜欢这种书写方式，它非常简洁并且高效。我的一个重要朋友之前总嫌弃我写的文档太差，前言不搭后语，语重心长地告诫我：可别瞧不起写文档，谁会去了解一个没有文档的项目啊。所以以后要多多<strong>产出</strong>，<strong>学习</strong>，<strong>记录</strong>！</p>
 <p>后续如果资金和时间充裕的话，会考虑搬家（换域名或者主题）和添置物件（加上评论之类的功能）。就像我给这个小房子设置的title一样：Begin Again，我的人生走到了一个新的阶段，希望能有新的开始。</p>
 
                 
@@ -477,7 +477,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Jane Janea</a>
+                    <a href="/about" rel="external nofollow noreferrer">Janea1</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -500,7 +500,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Jane Janea</a>
+                    <a href="/about" target="_blank">Janea1</a>
                     !
                 </span>
             </div>
@@ -509,7 +509,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        let toastHTML = '<span>复制成功啦</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -707,9 +707,9 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
                 <a href="/2021/12/06/ke-mu-er/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/20211206165106.png" class="responsive-img" alt="科目二">
+                        <img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/20211206165106.png" class="responsive-img" alt="驾考笔记">
                         
-                        <span class="card-title">科目二</span>
+                        <span class="card-title">驾考笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -980,7 +980,7 @@ ssh-keygen -t rsa -C <span class="token string">"github注册邮箱"</span><span
                 <span id="year">2021</span>
             
             <span id="year">2021</span>
-            <a href="/about" target="_blank">Jane Janea</a>
+            <a href="/about" target="_blank">Janea1</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
