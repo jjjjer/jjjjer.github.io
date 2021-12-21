@@ -13,14 +13,12 @@
       
       <categories>
           
-          <category> 考试 </category>
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> 笔记 </tag>
             
             <tag> 生活 </tag>
             
@@ -40,16 +38,16 @@
       
       <categories>
           
-          <category> 建站第一天 </category>
+          <category> 教程 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程 </tag>
+            <tag> hexo </tag>
             
-            <tag> 感悟 </tag>
+            <tag> github </tag>
             
         </tags>
       
@@ -71,6 +69,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
