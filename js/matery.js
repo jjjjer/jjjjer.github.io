@@ -82,28 +82,28 @@ $(function () {
             let title = $(this).attr('title');
             let captionText = "";
             // 如果alt为空，title来替
-            if (alt === undefined || alt === "") {
-                if (title !== undefined && title !== "") {
-                    captionText = title;
-                }
-            } else {
-                captionText = alt;
-            }
+            // if (alt === undefined || alt === "") {
+            //     if (title !== undefined && title !== "") {
+            //         captionText = title;
+            //     }
+            // } else {
+            //     captionText = alt;
+            // }
             // 字幕不空，添加之
-            if (captionText !== "") {
-                let captionDiv = document.createElement('div');
-                captionDiv.className = 'caption';
-                let captionEle = document.createElement('b');
-                captionEle.className = 'center-caption';
-                captionEle.innerText = captionText;
-                captionDiv.appendChild(captionEle);
-                this.insertAdjacentElement('afterend', captionDiv)
-            }
+            // if (captionText !== "") {
+            //     let captionDiv = document.createElement('div');
+            //     captionDiv.className = 'caption';
+            //     let captionEle = document.createElement('b');
+            //     captionEle.className = 'center-caption';
+            //     captionEle.innerText = captionText;
+            //     captionDiv.appendChild(captionEle);
+            //     this.insertAdjacentElement('afterend', captionDiv)
+            // }
         });
         $('#articleContent, #myGallery').lightGallery({
             selector: '.img-item',
             // 启用字幕
-            subHtmlSelectorRelative: true
+            subHtmlSelectorRelative: false
         });
 
         // progress bar init
