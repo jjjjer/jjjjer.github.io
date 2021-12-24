@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="脚本编写过程记录, JeBlog">
+    <meta name="keywords" content="使用python实现自动化打卡, JeBlog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>脚本编写过程记录 | JeBlog</title>
+    <title>使用python实现自动化打卡 | JeBlog</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -210,7 +210,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">脚本编写过程记录</h1>
+                    <h1 class="description center-align post-title">使用python实现自动化打卡</h1>
                 </div>
             </div>
         </div>
@@ -368,7 +368,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
@@ -393,7 +393,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="脚本编写过程记录"><a href="#脚本编写过程记录" class="headerlink" title="脚本编写过程记录"></a>脚本编写过程记录</h1><h2 id="登录过程"><a href="#登录过程" class="headerlink" title="登录过程"></a>登录过程</h2><blockquote>
+                <h1 id="脚本编写过程记录"><a href="#脚本编写过程记录" class="headerlink" title="脚本编写过程记录"></a>脚本编写过程记录</h1><p>本来我是不必造轮子来写这个自动化打卡脚本的，但是无奈之前依赖的脚本在一次删库事件中丢失了，然后在某人的push之下完成了该脚本，感谢伟大的python以及python各类库的开发者们，你们真滴很不错~</p>
+<h2 id="登录过程"><a href="#登录过程" class="headerlink" title="登录过程"></a>登录过程</h2><blockquote>
 <p>在进行写脚本之前首先跑通整个登录过程并抓包分析，本文是根据同院同学的打卡脚本找到的登录入口，现在学校已经进行了微服务的升级，升级之后的登录入口更改，并且需要验证码校验，等有空了再研究。</p>
 </blockquote>
 <p>登录入口如下，<a target="_blank" rel="noopener" href="https://wfw.scu.edu.cn/site/polymerization/polymerizationLogin?redirect=https://wfw.scu.edu.cn/ncov/wap/default/index&amp;from=wap">https://wfw.scu.edu.cn/site/polymerization/polymerizationLogin?redirect=https%3A%2F%2Fwfw.scu.edu.cn%2Fncov%2Fwap%2Fdefault%2Findex&amp;from=wap</a></p>
@@ -401,18 +402,19 @@
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211223145309586.png" alt="image-20211223145309586"></p>
 <p>登录完成后获取到<code>cookie</code>，同时跳转至<a target="_blank" rel="noopener" href="https://wfw.scu.edu.cn/ncov/wap/default/index%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%8F%96%E5%88%B0%E4%B8%8A%E6%AC%A1%E5%A1%AB%E5%86%99%E7%9A%84%E4%BF%A1%E6%81%AF">https://wfw.scu.edu.cn/ncov/wap/default/index，可以获取到上次填写的信息</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211223145519568.png" alt="image-20211223145519568"></p>
-<p>最后在<a target="_blank" rel="noopener" href="https://wfw.scu.edu.cn/ncov/wap/default/save%E4%BB%A5json%E6%A0%BC%E5%BC%8F%E6%8F%90%E4%BA%A4%E5%A1%AB%E6%8A%A5%E4%BF%A1%E6%81%AF">https://wfw.scu.edu.cn/ncov/wap/default/save以json格式提交填报信息</a></p>
+<p>最后在<a target="_blank" rel="noopener" href="https://wfw.scu.edu.cn/ncov/wap/default/save%E6%8F%90%E4%BA%A4%E5%A1%AB%E6%8A%A5%E4%BF%A1%E6%81%AF">https://wfw.scu.edu.cn/ncov/wap/default/save提交填报信息</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224100451717.png" alt="image-20211224100451717"></p>
 <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p><strong>HTTP头字段</strong>（英语：HTTP header fields）是指在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE">超文本传输协议</a>（HTTP）的请求和响应消息中的消息头部分。它们定义了一个超文本传输协议事务中的操作参数。HTTP头部字段可以自己根据需要定义，因此可能在 Web 服务器和浏览器上发现非标准的头字段</p>
 <p>头部字段代表含义，可在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers%E4%B8%AD%E6%9F%A5%E8%AF%A2">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers中查询</a></p>
 <h2 id="登录请求"><a href="#登录请求" class="headerlink" title="登录请求"></a>登录请求</h2><p>使用<code>python</code>的<code>requests</code>库发送请求</p>
 <p>HTTP协议本身是无状态的，为了让请求之间保持状态，有了<code>session</code>和<code>cookie</code>机制。<code>requests</code>也提供了相应的方法去操纵它们。</p>
-<p><code>requests</code>中的session对象能够让我们跨HTTP请求保持某些参数，<strong>即在同一个 Session 实例发出的所有请求之间保持 cookie</strong>。</p>
+<p><code>requests</code>中的<code>session</code>对象能够让我们跨<code>HTTP</code>请求保持某些参数，<strong>即在同一个 Session 实例发出的所有请求之间保持 cookie</strong>。</p>
 <p>在请求之前，首先声明一个新的session用于会话保持</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
 session<span class="token operator">=</span>requests<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span>
 r<span class="token operator">=</span>session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>header<span class="token punctuation">)</span><span class="token comment">#后续请求发送示意</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>接下来进行账户登录设置好<code>post</code>传输的<code>data</code>以及<code>headers</code>，均使用<code>json</code>格式</p>
+<p>接下来进行账户登录，设置好<code>post</code>传输的<code>data</code>以及<code>headers</code>，虽然使用的是<code>dict</code>格式，但<code>Reqeusts</code>支持自动将传递给<code>requests.post()</code>的<code>data</code>参数以<code>form</code>表单形式发送<code>post</code>请求，因此使用的数据提交格式仍然为<code>application/x-www-form-urlencoded</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">loginURL<span class="token operator">=</span><span class="token string">'https://wfw.scu.edu.cn/a_scu/api/sso/check'</span>
 loginData<span class="token operator">=</span><span class="token punctuation">{</span>
     <span class="token string">'username'</span><span class="token punctuation">:</span> username<span class="token punctuation">,</span>
@@ -430,8 +432,8 @@ loginHeader<span class="token operator">=</span><span class="token punctuation">
 
 <h2 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h2><p>现在已获取了<code>cookie</code>，可以使用<code>session</code>对象拉取上次填报信息，同样好设置请求头，伪装成一次正常的访问，提前在<code>burp</code>中抓包可以预想到接收到的内容</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211223205502727.png" alt="image-20211223205502727"></p>
-<p>接收到的内容比较复杂，但是我们一定记得在平时打卡的时候，大部分时候我们都不需要进行一项一项地填写，系统将会为我们自动填充上次填写的内容，因此我们可以在返回的<code>response</code>中找到我们上次填写的信息<code>oldInfo</code>。</p>
-<p>我们直接将<code>response</code>切换为<code>string</code>格式，然后使用正则匹配式找到我们上次填写的<code>oldInfo</code>信息，再把字符串转回<code>json</code>格式，方便<code>post</code>请求上传<code>data</code></p>
+<p>接收到的内容比较复杂，但是我们记得在平时打卡的时候，大部分时候我们都不需要进行一项一项地填写，系统将会为我们自动填充上次填写的内容，因此我们可以在返回的<code>response</code>中找到我们上次填写的信息<code>oldInfo</code>。</p>
+<p>我们直接将<code>response</code>切换为<code>string</code>格式，然后使用正则匹配式找到我们上次填写的<code>oldInfo</code>信息，再把字符串转为<code>dict</code>格式，方便<code>post</code>请求上传<code>data</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
 <span class="token keyword">import</span> re
 <span class="token keyword">import</span> json
@@ -439,7 +441,7 @@ getR<span class="token operator">=</span>session<span class="token punctuation">
 oldInfo<span class="token operator">=</span>re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'.*?oldInfo: (.*),.*?'</span><span class="token punctuation">,</span>getR<span class="token punctuation">)</span><span class="token comment">#正则匹配</span>
 oldData<span class="token operator">=</span><span class="token builtin">eval</span><span class="token punctuation">(</span>oldInfo<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">#将字符转化为json</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>正则 <code>re.findall</code>  （返回string中所有与pattern相匹配的全部字串，返回形式为数组）</p>
+<p> <code>re.findall</code>  （返回string中所有与pattern相匹配的全部字串，返回形式为数组），使用方法如下</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">,</span> flags<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="提交信息"><a href="#提交信息" class="headerlink" title="提交信息"></a>提交信息</h2><p>将刚才获取的<code>oldInfo</code>使用<code>POST</code>请求发送到目标<code>URL</code></p>
@@ -472,8 +474,8 @@ msg<span class="token punctuation">[</span><span class="token string">'From'</sp
 msg<span class="token punctuation">[</span><span class="token string">'To'</span><span class="token punctuation">]</span> <span class="token operator">=</span> To<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>发送邮件的过程如下，</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">client <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP_SSL<span class="token punctuation">(</span><span class="token string">'smtp.qq.com'</span><span class="token punctuation">,</span> smtplib<span class="token punctuation">.</span>SMTP_SSL_PORT<span class="token punctuation">)</span>
-client<span class="token punctuation">.</span>login<span class="token punctuation">(</span>From<span class="token punctuation">,</span> pwd<span class="token punctuation">)</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">client <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP_SSL<span class="token punctuation">(</span><span class="token string">'smtp.qq.com'</span><span class="token punctuation">,</span> smtplib<span class="token punctuation">.</span>SMTP_SSL_PORT<span class="token punctuation">)</span><span class="token comment">#设计邮件客户端</span>
+client<span class="token punctuation">.</span>login<span class="token punctuation">(</span>From<span class="token punctuation">,</span> pwd<span class="token punctuation">)</span><span class="token comment">#登录邮件服务器</span>
 client<span class="token punctuation">.</span>sendmail<span class="token punctuation">(</span>From<span class="token punctuation">,</span> To<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>as_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 client<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -481,7 +483,7 @@ client<span class="token punctuation">.</span>quit<span class="token punctuation
 <p>这里的mail_password填写的为<strong>授权码</strong>而非自己的QQ邮箱密码,获取授权码的过程如下</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211222094423561.png" alt="image-20211222094423561"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211222094518751.png" alt="image-20211222094518751"></p>
-<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>设定为每天早上执行任务，在[1]文章中总结了几种定时执行任务的方法，本文使用的是任务框架<code>APScheduler</code></p>
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>设定为每天早上执行任务，在文章[1]中总结了几种定时执行任务的方法，本文使用的是任务框架<code>APScheduler</code></p>
 <p>使用的库以及使用方法如下：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> apscheduler<span class="token punctuation">.</span>schedulers<span class="token punctuation">.</span>blocking <span class="token keyword">import</span> BlockingScheduler
 <span class="token keyword">from</span> apscheduler<span class="token punctuation">.</span>schedulers<span class="token punctuation">.</span>background <span class="token keyword">import</span> BackgroundScheduler
@@ -1015,9 +1017,9 @@ sched<span class="token punctuation">.</span>add_job<span class="token punctuati
                 <a href="/2021/12/23/zi-dong-da-qia-jiao-ben-bian-xie-guo-cheng-ji-lu/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211223214651017.png" class="responsive-img" alt="脚本编写过程记录">
+                        <img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211223214651017.png" class="responsive-img" alt="使用python实现自动化打卡">
                         
-                        <span class="card-title">脚本编写过程记录</span>
+                        <span class="card-title">使用python实现自动化打卡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
