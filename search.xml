@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>在远程服务器上部署脚本</title>
+      <link href="/2021/12/24/111/"/>
+      <url>/2021/12/24/111/</url>
+      
+        <content type="html"><![CDATA[<h1 id="在远程服务器上部署脚本"><a href="#在远程服务器上部署脚本" class="headerlink" title="在远程服务器上部署脚本"></a>在远程服务器上部署脚本</h1><blockquote><p>其实这个功能非常常用，在进行<strong>后端部署</strong>或者<strong>自动化脚本执行</strong>的时候，所以还是记录一下省的每次都去google</p></blockquote><h2 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h2><p>使用SSH（远程桌面）连接到服务器，有许多软件可选择，本文使用的是Xshell连接，新建一个会话并输入连接的服务器IP</p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224110444110.png" alt="image-20211224110444110"></p><p>新建完成后双击会话开始连接，需要输入服务器的用户名以及密码</p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224110849633.png" alt="image-20211224110849633"></p><ul><li>Xshell复制快捷键 Ctrl+Insert    粘贴快捷键 Shift+Insert</li></ul><h2 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h2><p>根据之前的使用经验，我觉得宝塔面板最大的好处就是<strong>可视化</strong>和<strong>汉化</strong>，不需要在命令行中敲击复杂的命令，虽然这样有点不够极客，但是我觉得比较适合我，因为我记不住命令。不过宝塔的权限非常高，最近也出现了很多安全性的问题，使用宝塔的朋友记得要经常升级宝塔</p><p>安装宝塔的教程参考官方链接 <a href="https://www.bt.cn/bbs/thread-19376-1-1.html%EF%BC%8C%E5%85%B6%E4%B8%AD%E8%BF%98%E5%8C%85%E5%90%AB%E4%BA%86%E4%B8%8D%E5%90%8C%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%95%86%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%E5%AE%9A%E8%A6%81%E5%BC%80%E6%94%BE%EF%BC%89">https://www.bt.cn/bbs/thread-19376-1-1.html，其中还包含了不同的服务商开放端口的教程（一定要开放）</a></p><p>接下来在服务器中使用<code>bt</code>命令可以查看面板的各种信息，例如忘记了面板的登录入口以及用户名密码等，都可以在这里查看</p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224112712017.png" alt="image-20211224112712017"></p><p>通过外网面板地址登录进入面板界面，可以说现在你所有想干的事都可以在这里完成</p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224113437712.png" alt="image-20211224113437712"></p><p>例如在root路径下新建一个文件夹并上传一个文件，在shell中我们需要输入如下命令</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">pwd</span><span class="token builtin class-name">cd</span> root<span class="token function">mkdir</span> je<span class="token builtin class-name">cd</span> je <span class="token comment">#上传文件需要借助lrzsz包</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224113800355.png" alt="image-20211224113800355"></p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224113820634.png" alt="image-20211224113820634"></p><p>宝塔甚至还能够实现在线文本编辑</p><p><img src="https://cdn.jsdelivr.net/gh/jjjjer/Figurebed@master//img/image-20211224114543186.png" alt="image-20211224114543186"></p><h2 id="保持任务"><a href="#保持任务" class="headerlink" title="保持任务"></a>保持任务</h2><p>服务器经常运行一些需要很长时间才能完成的任务，比如系统备份、ftp 传输等等。通常情况下我们都是为每一个这样的任务开一个远程终端窗口，因为它们执行的时间太长了。<strong>必须等待它们执行完毕，在此期间不能关掉窗口或者断开连接，否则这个任务就会被杀掉，一切半途而废了。</strong><code>Screen</code>程序可以很好地帮助我们解决这个问题</p><p>Debian/Ubuntu系统执行以下命令安装：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">screen</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>关于screen的命令使用如下</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">screen</span> -ls<span class="token comment">#查看screen列表</span><span class="token function">screen</span> -S <span class="token string">'name'</span><span class="token comment">#创建新的screen</span><span class="token function">screen</span> -r <span class="token string">'name'</span><span class="token comment">#进入screen</span>Ctrl + a d<span class="token comment">#暂时退出当前screen</span><span class="token builtin class-name">exit</span><span class="token comment">#退出并删除当前screen</span><span class="token function">screen</span> -d <span class="token string">'name'</span><span class="token comment">#远程分离该screen</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然以上的内容我已经反复配置多次了，但是由于自己记性太差并且产出不多的原因，总是忘记其中的命令行用法，这次就完完整整地记录一遍，下次就不用去找谷歌帮忙了(●ˇ∀ˇ●)  多半是回到这里再照着敲。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 宝塔 </tag>
+            
+            <tag> Screen </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用python实现自动化打卡</title>
       <link href="/2021/12/23/zi-dong-da-qia-jiao-ben-bian-xie-guo-cheng-ji-lu/"/>
       <url>/2021/12/23/zi-dong-da-qia-jiao-ben-bian-xie-guo-cheng-ji-lu/</url>
